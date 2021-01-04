@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent implements OnInit {
-
+  public count = 0;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  incrementar(): void {
+    this.count += 1;
+  }
+
+  decrementar(): void {
+    this.count -= 1;
   }
 
 }
