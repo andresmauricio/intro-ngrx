@@ -24,4 +24,9 @@ export class HijoComponent implements OnInit {
     this.contadorHijo.emit(this.count);
   }
 
+  resetNieto(event) {
+    this.count = event;
+    this.contadorHijo.emit(this.count);
+  }
+
 }

@@ -5,3 +5,7 @@
          <button class="btn btn-warning ml-3" (click)="dividir()">Dividir</button>
     </div>
 </div>
+
+<hr>
+
+<app-nieto [count]="count" (countNieto)="resetNieto($event)"></app-nieto>
