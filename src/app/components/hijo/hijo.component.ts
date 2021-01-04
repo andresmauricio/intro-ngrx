@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hijo',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HijoComponent implements OnInit {
 
+  @Input() public count: number;
+  @Output() contadorHijo = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  multiplicar() {
+    this.count *= 2;
+    this.contadorHijo.emit(this.count);
+  }
+
+  dividir() {
+    this.count /= 2;
+    this.contadorHijo.emit(this.count);
   }
 
 }
