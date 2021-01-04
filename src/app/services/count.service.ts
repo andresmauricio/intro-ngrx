@@ -13,4 +13,12 @@ export class CountService {
   decrementar(): void {
     this.count -= 1;
   }
+
+  multiplicar() {
+    this.count *= 2;
+  }
+
+  dividir() {
+    this.count /= 2;
+  }
 }
