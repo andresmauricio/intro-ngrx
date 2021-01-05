@@ -27,6 +27,7 @@ export class CountService {
 
   dividir() {
     //this.count /= 2;
+    this.store.dispatch(actionCounter.DIVIDER());
   }
 
   reset(): void {
