@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row text-center">
     <div class="col">
-      <h1>Contador: {{countService.count}}</h1>
+      <h1>Contador: {{countService.count$ | async}}</h1>
       <button class="btn btn-primary mr-3" (click)="countService.decrementar()">Decrementar</button>
       <button class="btn btn-info" (click)="countService.incrementar()">Incrementar</button>
     </div>
