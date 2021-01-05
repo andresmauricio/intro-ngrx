@@ -7,7 +7,7 @@ const _counterReducer = createReducer(
   initialState,
   on(INCREMENT, (state) => state + 1),
   on(DECREMENT, (state) => state - 1),
-  on(MULTIPLY, state => state * 2),
+  on(MULTIPLY, (state, payload) => state * payload.value),
   on(DIVIDER, state => state / 2),
   on(RESET, (state) => 0)
 );

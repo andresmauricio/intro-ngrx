@@ -17,6 +17,6 @@ export class HijoComponent implements OnInit {
   }
 
   multiply() {
-    this.store.dispatch(MULTIPLY())
+    this.store.dispatch(MULTIPLY({value: 5 }))
   }
 }
