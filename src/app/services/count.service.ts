@@ -21,4 +21,8 @@ export class CountService {
   dividir() {
     this.count /= 2;
   }
+
+  reset(): void {
+    this.count = 0;
+  }
 }
