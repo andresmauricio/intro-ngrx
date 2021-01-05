@@ -31,5 +31,6 @@ export class CountService {
 
   reset(): void {
     //this.count = 0;
+    this.store.dispatch(actionCounter.RESET());
   }
 }
