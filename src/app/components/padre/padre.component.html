@@ -1,0 +1,11 @@
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col">
+      <h1>Contador: {{count}}</h1>
+      <button class="btn btn-primary mr-3" (click)="decrementar()">Decrementar</button>
+      <button class="btn btn-info" (click)="incrementar()">Incrementar</button>
+    </div>
+  </div>
+  <hr>
+  <app-hijo [count]="count" (contadorHijo)="count = $event"></app-hijo>
+</div>
