@@ -1,4 +1,8 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { MULTIPLY } from 'src/app/count.action';
+import { CountService } from 'src/app/services/count.service';
+
 
 @Component({
   selector: 'app-hijo',
@@ -7,26 +11,12 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HijoComponent implements OnInit {
 
-  @Input() public count: number;
-  @Output() contadorHijo = new EventEmitter();
-  constructor() { }
+  constructor(public countService: CountService, private store: Store<{count: number}>) { }
 
   ngOnInit(): void {
   }
 
-  multiplicar() {
-    this.count *= 2;
-    this.contadorHijo.emit(this.count);
+  multiply() {
+    this.store.dispatch(MULTIPLY({value: 5 }))
   }
-
-  dividir() {
-    this.count /= 2;
-    this.contadorHijo.emit(this.count);
-  }
-
-  resetNieto(event) {
-    this.count = event;
-    this.contadorHijo.emit(this.count);
-  }
-
 }

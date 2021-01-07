@@ -1,6 +1,6 @@
 <div class="row text-center mt-5">
     <div class="col">
-        <h3>Contador del Nieto: {{count}}</h3>
-        <button class="btn btn-danger" (click)="reset()">Reset</button>
+        <h3>Contador del Nieto: {{countService.count$ | async}}</h3>
+        <button class="btn btn-danger" (click)="countService.reset()">Reset</button>
     </div>
 </div>

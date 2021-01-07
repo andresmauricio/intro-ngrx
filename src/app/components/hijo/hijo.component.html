@@ -1,11 +1,11 @@
 <div class="row text-center mt-5">
     <div class="col">
-         <h2>Contador Hijo: {{count}}</h2>
-         <button class="btn btn-success" (click)="multiplicar()">Multiplicar</button>
-         <button class="btn btn-warning ml-3" (click)="dividir()">Dividir</button>
+         <h2>Contador Hijo: {{countService.count$ | async}}</h2>
+         <button class="btn btn-success" (click)="multiply()">Multiplicar</button>
+         <button class="btn btn-warning ml-3" (click)="countService.dividir()">Dividir</button>
     </div>
 </div>
 
 <hr>
 
-<app-nieto [count]="count" (countNieto)="resetNieto($event)"></app-nieto>
+<app-nieto></app-nieto>

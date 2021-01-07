@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountService } from 'src/app/services/count.service';
 
 @Component({
   selector: 'app-padre',
@@ -6,18 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent implements OnInit {
-  public count = 10;
-  constructor() { }
+  
+  constructor(public countService: CountService) { }
 
   ngOnInit(): void {
-  }
-
-  incrementar(): void {
-    this.count += 1;
-  }
-
-  decrementar(): void {
-    this.count -= 1;
   }
 
 }
